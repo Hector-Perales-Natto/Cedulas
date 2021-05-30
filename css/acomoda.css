@@ -1,0 +1,32 @@
+.my-5 {
+	margin-top: 0 !important;
+}
+
+footer {
+	position: fixed;
+	left: 0px;
+	bottom: 0px;
+	width: 100%;
+	background-color: #ffffff;
+}
+
+.caem {
+	font-size: 20pt;
+	margin: 0;
+	text-align: center;
+	/* color: #ffffff; */
+}
+
+.umai {
+	font-size: 14pt;
+	margin: 0;
+	text-align: center;
+	/* color: #ffffff; */
+}
+
+.subdir {
+	font-size: 14pt;
+	margin: 0;
+	text-align: center;
+	/* color: #ffffff; */
+}

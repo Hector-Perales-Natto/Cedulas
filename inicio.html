@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<meta charset="utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<title>CEFA</title>
+		<link rel="stylesheet" type="text/css" href="css/sweetalert2.min.css" />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap"
+			rel="stylesheet"
+		/>
+		<link
+			rel="stylesheet"
+			href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+		/>
+		<link
+			rel="stylesheet"
+			href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+		/>
+		<link rel="stylesheet" type="text/css" href="css/inicio.css" />
+		<link rel="shortcut icon" href="assets/images/favicon.ico" />
+	</head>
+	<body onload="entrar.username.focus()">
+		<!-- Modal HTML -->
+		<div class="page-wrapper">
+			<h1 class="modal-title">
+				Cédula de Facultades y Registro de Firmas<br />(CEFA)
+			</h1>
+		</div>
+		<div id="myModal">
+			<div class="modal-dialog modal-login">
+				<div class="modal-content">
+					<div class="avatar">
+						<img src="assets/images/logo-caem.png" alt="Avatar" />
+					</div>
+					<div class="modal-body">
+						<form name="entrar" method="post" enctype="multipart/form-data">
+							<div class="form-group">
+								<input
+									type="text"
+									class="form-control"
+									name="usuario"
+									placeholder="Nombre de usuario"
+									maxlength="20"
+									required="required"
+								/>
+							</div>
+							<div class="form-group">
+								<input
+									type="password"
+									class="form-control"
+									name="clave"
+									placeholder="Contraseña"
+									maxlength="8"
+									required="required"
+								/>
+							</div>
+							<div class="form-group">
+								<button
+									type="submit"
+									class="btn btn-primary btn-lg btn-block login-btn"
+									id="ingresar"
+									name="ingresar"
+									value="&rarr;"
+								>
+									Ingresar
+								</button>
+							</div>
+						</form>
+					</div>
+					<div class="modal-footer">
+						<a href="#" class="olvideContraseña"
+							>¿Se te olvidó tu contraseña?</a
+						>
+					</div>
+				</div>
+			</div>
+			<div class="page-wrapper">
+				<footer class="footer">
+					<p class="caem">Comisión del Agua del Estado de México.</p>
+					<p class="umai">
+						Unidad de Modernización Administrativa e Informática.
+					</p>
+					<p class="subdir">Subdirección de Informática.</p>
+				</footer>
+			</div>
+		</div>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+		<script src="js/sweetalert2.min.js"></script>
+	</body>
+</html>
+
+<script type="text/javascript">
+	$(document).ready(function () {
+		$('.olvideContraseña').on('click', function (e) {
+			e.preventDefault();
+			swal({
+				position: 'center',
+				text:
+					'Póngase en contacto con la UMAI, para que le proporcione una nueva contraseña!',
+				confirmButtonColor: '#DD6B55',
+			}).then(function () {
+				window.location.href = 'index.php?pagina=inicio.php';
+			});
+		});
+	});
+</script>
